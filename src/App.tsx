@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/Resume";
-import Projects from "./pages/Portfolio";
+import Resume from "./pages/Resume";
+import Portfolio from "./pages/Portfolio";
 import GlobalStyle from "./styles/global";
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/about" element={<Resume />} />
+        <Route path="/Portfolio" element={<Portfolio />} />
       </Routes>
     </Router>
   );

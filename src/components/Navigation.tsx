@@ -6,23 +6,29 @@ import styled from "styled-components";
 const Nav = styled.nav`
   display: flex;
   justify-content: space-around;
-  background: #333;
+  background: #fff;
   padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
+    "Segoe UI Symbol";
 `;
 
 const NavLink = styled(Link)`
-  color: white;
+  color: #333;
   text-decoration: none;
+  font-weight: 700;
   &:hover {
-    text-decoration: underline;
+    color: #007bff;
   }
 `;
 
 const ExternalLink = styled.a`
-  color: white;
+  color: #333;
   text-decoration: none;
+  font-weight: 700;
   &:hover {
-    text-decoration: underline;
+    color: #007bff;
   }
 `;
 
@@ -30,6 +36,7 @@ const Navigation = () => (
   <Nav>
     <NavLink to="/">Home</NavLink>
     <NavLink to="/Resume">Resume</NavLink>
+    <NavLink to="/Portfoilo">Portfolio</NavLink>
     <ExternalLink
       href="https://github.com/9walnut"
       target="_blank"
