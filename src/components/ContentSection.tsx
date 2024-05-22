@@ -44,13 +44,6 @@ const Title = styled.h1`
   color: #333;
 `;
 
-const Paragraph = styled.p`
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 20px;
-`;
-
 const Link = styled.a`
   display: block;
   color: blue;
