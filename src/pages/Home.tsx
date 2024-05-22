@@ -1,42 +1,138 @@
+import React from "react";
 import Navigation from "../components/Navigation";
-import Container from "../components/Container";
-import Section from "../components/Section";
-import backgroundImage from "../assets/hodu3.jpg";
+import { Parallax } from "react-parallax";
 import styled from "styled-components";
+import backgroundImage from "../assets/hodu3.jpg";
 
-const StyledImage = styled.img`
-  width: 100%;
-  max-width: 900px; /* 최대 너비 900px로 설정 */
-  height: auto; /* 비율에 맞춰 자동으로 높이 조절 */
-  max-height: 400px;
+// 스타일 정의
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
 `;
 
-const Introduction = styled.p`
-  font-size: 16px;
-  margin-top: 20px;
-  border: solid 1px #c1c0c0;
+const HeroSection = styled.section`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  color: white;
+  text-align: center;
+`;
 
-  & > div {
-    margin-bottom: 10px;
-  }
+const HeroText = styled.div`
+  background: rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  flex: 1;
+  text-align: left;
+`;
+
+const H1 = styled.h1`
+  font-size: 2rem; /* h1의 글꼴 크기 설정 */
+  margin-bottom: 10px;
+  color: #fff; /* 텍스트 색상 설정 */
+`;
+
+const H2 = styled.h2`
+  font-size: 1.5rem; /* h2의 글꼴 크기 설정 */
+  margin-bottom: 10px;
+  color: #fff; /* 텍스트 색상 설정 */
+`;
+
+const ProfileImage = styled.img`
+  max-width: 600px;
+  margin: 20px;
+  height: auto;
+  border-radius: 10px;
+  flex: 1;
+`;
+
+const ContentSection = styled.section`
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+`;
+
+const Title = styled.h1`
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+`;
+
+const Subtitle = styled.h2`
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #666;
+`;
+
+const Paragraph = styled.p`
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+`;
+
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+`;
+
+const LogoLink = styled.a`
+  margin-right: 10px;
+`;
+
+const LogoImage = styled.img`
+  width: 40px;
+  height: 40px;
 `;
 
 const Home = () => (
   <div>
     <Navigation />
-    <Section name="권구호" occupation="Web Backend Developer"></Section>
-    <Container>
-      <StyledImage src={backgroundImage} alt="예시" />
-      <Introduction>
-        <div>
-          안녕하세요! 저는 권구호입니다. 웹 백엔드 개발자로 일하고 있습니다.
-        </div>
-        <div>
-          React와 Node.js를 주로 다루며, 새로운 기술을 학습하고 적용하는 것을
-          즐깁니다. 함께 일하고 싶으시다면 언제든 연락주세요!
-        </div>
-      </Introduction>
-    </Container>
+    <Parallax bgImage={backgroundImage} strength={500}>
+      <HeroSection>
+        <HeroText>
+          <H2>Hi!</H2>
+          <H1>I'm Guho Kwon</H1>
+          <H2>I'm a Backend Developer</H2>
+          <H2>I specialized in node.JS and Springboot</H2>
+          <H2>Also, I familiar with AWS, Docker</H2>
+          <LogoContainer>
+            <LogoLink href="링크 주소" target="_blank">
+              <LogoImage src={backgroundImage} alt="Github" />
+            </LogoLink>
+            <LogoLink href="링크 주소" target="_blank">
+              <LogoImage src={backgroundImage} alt="LinkedIn" />
+            </LogoLink>
+            <LogoLink href="링크 주소" target="_blank">
+              <LogoImage src={backgroundImage} alt="Tistory" />
+            </LogoLink>
+          </LogoContainer>
+        </HeroText>
+        <ProfileImage src={backgroundImage} alt="Profile" />
+      </HeroSection>
+    </Parallax>
+    <MainContainer>
+      <ContentSection>
+        <Title>My Work</Title>
+        <Subtitle>Project 1</Subtitle>
+        <Paragraph>프로젝트 1에 대한 설명입니다. 이 프로젝트는 ...</Paragraph>
+        <Subtitle>Project 2</Subtitle>
+        <Paragraph>프로젝트 2에 대한 설명입니다. 이 프로젝트는 ...</Paragraph>
+      </ContentSection>
+    </MainContainer>
   </div>
 );
 

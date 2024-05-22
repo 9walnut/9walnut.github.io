@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import Portfolio from "./pages/Portfolio";
 import GlobalStyle from "./styles/global";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/about" element={<Resume />} />
         <Route path="/Portfolio" element={<Portfolio />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
