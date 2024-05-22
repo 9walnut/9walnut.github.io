@@ -41,14 +41,19 @@ const ContentWrapper = styled.div`
 const Title = styled.h1`
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #333;
+  color: #091292;
 `;
 
 const Link = styled.a`
-  display: block;
-  color: blue;
-  text-decoration: underline;
-  margin-bottom: 10px;
+  margin-right: 10px;
+  color: #3375e8;
+  text-decoration: none;
+  font-size: 100%;
+  font-weight: 700;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const TechStacks = styled.div`
@@ -84,12 +89,12 @@ const ContentSection: React.FC<ContentSectionProps> = ({
       {children}
       {deployLink && (
         <Link href={deployLink} target="_blank">
-          Deploy Link
+          Visit Site
         </Link>
       )}
       {codeLink && (
         <Link href={codeLink} target="_blank">
-          Code Link
+          GitHub Link
         </Link>
       )}
       {techStacks && (

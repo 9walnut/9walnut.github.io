@@ -2,6 +2,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import { Parallax } from "react-parallax";
 import styled from "styled-components";
+import Skills from "../components/Skills";
 import backgroundImage from "../assets/hodu3.jpg";
 import ohsulthumnail from "../assets/ohsulthumbnail.png";
 import thewavethumbnail from "../assets/thewavethumbnail.png";
@@ -99,6 +100,7 @@ const Home = () => (
       </HeroSection>
     </Parallax>
     <MainContainer>
+      <h1>Projects</h1>
       {/* 오늘의 술 */}
       <ContentSection
         title="오늘의 술"
@@ -145,6 +147,7 @@ const Home = () => (
           입니다
         </p>
       </ContentSection>
+      <Skills /> {/* Skills 컴포넌트 추가 */}
     </MainContainer>
   </div>
 );
