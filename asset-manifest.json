@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.aa73be5d.js",
+    "main.js": "/static/js/main.f643ec51.js",
+    "static/media/thewavethumbnail.png": "/static/media/thewavethumbnail.f5fb4338b588aff946fa.png",
+    "static/media/ohsulthumbnail.png": "/static/media/ohsulthumbnail.e47257ebc5bc37e85cdc.png",
     "static/media/hodu3.jpg": "/static/media/hodu3.fd1e82586d252c501cf3.jpg",
     "index.html": "/index.html",
-    "main.aa73be5d.js.map": "/static/js/main.aa73be5d.js.map"
+    "main.f643ec51.js.map": "/static/js/main.f643ec51.js.map"
   },
   "entrypoints": [
-    "static/js/main.aa73be5d.js"
+    "static/js/main.f643ec51.js"
   ]
 }
