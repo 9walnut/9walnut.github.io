@@ -151,7 +151,7 @@ const Home = () => (
         <ContentSection
           title="더 웨이브 - 쇼핑몰 프로젝트"
           imageSrc={thewavethumbnail}
-          deployLink="https://ohsul.site"
+          deployLink="https://thewavemarket.co.kr/"
           codeLink="https://github.com/9walnut/TheWave"
           techStacks={[
             "Node.JS",
