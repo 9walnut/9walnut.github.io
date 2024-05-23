@@ -9,6 +9,10 @@ interface NavLinksProps {
 }
 
 const Nav = styled.nav`
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -18,11 +22,13 @@ const Nav = styled.nav`
   font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
     "Segoe UI Symbol";
+  z-index: 2;
 `;
 
 const Logo = styled(Link)`
   margin-right: auto;
   img {
+    border-radius: 70%;
     height: 40px;
   }
 `;
@@ -33,6 +39,7 @@ const NavLinks = styled.div.attrs<NavLinksProps>(({ open }) => ({
   display: flex;
   justify-content: space-around;
   width: 100%;
+  position: relative;
 
   @media (max-width: 758px) {
     display: ${({ open }) => (open ? "flex" : "none")};
@@ -46,7 +53,7 @@ const NavLinks = styled.div.attrs<NavLinksProps>(({ open }) => ({
   }
 `;
 
-const NavLink = styled(Link)`
+const NavLink = styled.a`
   color: #333;
   text-decoration: none;
   font-weight: 700;
@@ -98,25 +105,13 @@ const Navigation = () => {
         <Bar />
       </Hamburger>
       <NavLinks open={isOpen}>
-        <NavLink to="/">Home</NavLink>
+        <NavLink href="#home">Home</NavLink>
         <ExternalLink href="/resume.pdf" download>
           Resume
         </ExternalLink>
-        <NavLink to="/Portfoilo">Portfolio</NavLink>
-        <ExternalLink
-          href="https://github.com/9walnut"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </ExternalLink>
-        <ExternalLink
-          href="https://9walnut.tistory.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Blog
-        </ExternalLink>
+        <NavLink href="#portfolio">Portfolio</NavLink>
+        <NavLink href="#skills">Skills</NavLink>
+        <NavLink href="#contact">Contact</NavLink>
       </NavLinks>
     </Nav>
   );

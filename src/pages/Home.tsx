@@ -3,7 +3,9 @@ import Navigation from "../components/Navigation";
 import { Parallax } from "react-parallax";
 import styled from "styled-components";
 import Skills from "../components/Skills";
+import Contact from "../components/Contact";
 import backgroundImage from "../assets/hodu3.jpg";
+import gmailImg from "../assets/logoImg/gmail.svg";
 import githubImg from "../assets/logoImg/Github-Light.svg";
 import tistoryImg from "../assets/logoImg/tistory.svg";
 import linkedInImg from "../assets/logoImg/LinkedIn.svg";
@@ -18,21 +20,22 @@ const MainContainer = styled.div`
   align-items: center;
   padding: 20px;
   background-color: #f5f5f5;
+  width: 100%;
 `;
 
 const HeroSection = styled.section`
+  background-color: #1e2749;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: 80vh;
   color: white;
   text-align: center;
 `;
 
 const HeroText = styled.div`
-  background: rgba(0, 0, 0, 0.5);
-  margin: 20px;
+  margin: 40px;
   padding: 20px;
   border-radius: 10px;
   max-width: 500px;
@@ -41,29 +44,35 @@ const HeroText = styled.div`
 `;
 
 const H1 = styled.h1`
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.3rem;
+  margin: 1px;
   color: #fff;
 `;
 
 const H2 = styled.h2`
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin: 1px;
+  color: #fff;
+`;
+
+const H3 = styled.h3`
+  font-size: 1rem;
+  margin: 1px;
   color: #fff;
 `;
 
 const ProfileImage = styled.img`
-  max-width: 400px;
-  margin: 20px;
-  height: auto;
-  border-radius: 10px;
+  max-width: 20%; /* 화면 너비의 30%로 최대 너비 지정 */
+  height: auto; /* 높이는 자동으로 조절되도록 설정 */
+  margin: 40px;
+  border-radius: 70%;
   flex: 1;
 `;
 
 const LogoContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   margin-top: 20px;
 `;
 
@@ -76,18 +85,27 @@ const LogoImage = styled.img`
   height: 40px;
 `;
 
+const SectionTitle = styled.h1`
+  text-align: center;
+`;
+
 const Home = () => (
   <div>
     <Navigation />
     <Parallax strength={500}>
       <HeroSection>
         <HeroText>
-          <H2>Hi!</H2>
-          <H1>I'm Guho Kwon</H1>
-          <H2>I'm a Backend Developer</H2>
-          <H2>I specialized in node.JS and Springboot</H2>
-          <H2>Also, I familiar with AWS, Docker</H2>
+          <H2>Hi, I'm</H2>
+          <H1>Guho Kwon</H1>
+          <H2>Web Backend Developer</H2>
+          <H3>
+            I specialized in node.JS and Springboot and I familiar with AWS,
+            Docker
+          </H3>
           <LogoContainer>
+            <LogoLink href="https://github.com/9walnut" target="_blank">
+              <LogoImage src={gmailImg} alt="gmai" />
+            </LogoLink>
             <LogoLink href="https://github.com/9walnut" target="_blank">
               <LogoImage src={githubImg} alt="Github" />
             </LogoLink>
@@ -103,55 +121,63 @@ const Home = () => (
       </HeroSection>
     </Parallax>
     <MainContainer>
-      <h1>Projects</h1>
-      {/* 오늘의 술 */}
-      <ContentSection
-        title="오늘의 술"
-        imageSrc={ohsulthumnail}
-        deployLink="https://ohsul.site"
-        codeLink="https://github.com/9walnut/Ohsul-BE"
-        techStacks={[
-          "JAVA",
-          "Springboot",
-          "Spring-Security",
-          "JPA",
-          "MariaDB",
-          "AWS",
-          "Docker",
-          "Gitaction",
-        ]}
-      >
-        {/* 더웨이브 */}
-        <p>
-          위치, 태그 정보를 기반으로 취향에 맞는 술집 정보를 제공하는
-          서비스입니다. 술, 분위기 등의 태그를 선택해 원하는 조건에 맞는 술집을
-          확인할 수 있으며 리뷰 작성을 통해 술집 정보를 동적으로 업데이트합니다
-        </p>
-      </ContentSection>
-      <ContentSection
-        title="더 웨이브 - 쇼핑몰 프로젝트"
-        imageSrc={thewavethumbnail}
-        deployLink="https://ohsul.site"
-        codeLink="https://github.com/9walnut/TheWave"
-        techStacks={[
-          "Node.JS",
-          "Express",
-          "Sequelize",
-          "AWS",
-          "MySQL",
-          "Redis",
-          "JWT",
-          "Jenkins",
-          "Docker",
-        ]}
-      >
-        <p>
-          친동생이 실제 판매 중인 레터링 풍선을 판매하는 쇼핑몰 컨셉의 프로젝트
-          입니다
-        </p>
-      </ContentSection>
-      <Skills /> {/* Skills 컴포넌트 추가 */}
+      <div id="portfolio">
+        <SectionTitle>Projects</SectionTitle>
+        {/* 오늘의 술 */}
+        <ContentSection
+          title="오늘의 술"
+          imageSrc={ohsulthumnail}
+          deployLink="https://ohsul.site"
+          codeLink="https://github.com/9walnut/Ohsul-BE"
+          techStacks={[
+            "JAVA",
+            "Springboot",
+            "Spring-Security",
+            "JPA",
+            "MariaDB",
+            "AWS",
+            "Docker",
+            "Gitaction",
+          ]}
+        >
+          {/* 더웨이브 */}
+          <p>
+            위치, 태그 정보를 기반으로 취향에 맞는 술집 정보를 제공하는
+            서비스입니다. 술, 분위기 등의 태그를 선택해 원하는 조건에 맞는
+            술집을 확인할 수 있으며 리뷰 작성을 통해 술집 정보를 동적으로
+            업데이트합니다
+          </p>
+        </ContentSection>
+        <ContentSection
+          title="더 웨이브 - 쇼핑몰 프로젝트"
+          imageSrc={thewavethumbnail}
+          deployLink="https://ohsul.site"
+          codeLink="https://github.com/9walnut/TheWave"
+          techStacks={[
+            "Node.JS",
+            "Express",
+            "Sequelize",
+            "AWS",
+            "MySQL",
+            "Redis",
+            "JWT",
+            "Jenkins",
+            "Docker",
+          ]}
+        >
+          <p>
+            친동생이 실제 판매 중인 레터링 풍선을 판매하는 쇼핑몰 컨셉의
+            프로젝트 입니다
+          </p>
+        </ContentSection>
+      </div>
     </MainContainer>
+    <div id="skills">
+      <Skills />
+    </div>
+    <div id="contact">
+      <Contact />
+    </div>
   </div>
 );
 

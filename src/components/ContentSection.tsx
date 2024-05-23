@@ -8,7 +8,7 @@ interface ContentSectionProps {
   deployLink?: string;
   codeLink?: string;
   techStacks?: string[];
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const StyledSection = styled.section`
@@ -29,6 +29,7 @@ const ImageWrapper = styled.div`
 
 const Image = styled.img`
   width: 100%;
+  min-width: 150px;
   max-width: 300px;
   height: 200px;
   border-radius: 10px;

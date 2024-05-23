@@ -22,11 +22,10 @@ import githubImg from "../assets/stackImg/Github-Light.svg";
 import gitactionsImg from "../assets/stackImg/GithubActions-Light.svg";
 
 const SkillsContainer = styled.div`
+  background-color: #1e2749;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
-  max-width: 1400px;
 `;
 
 const CategoryContainer = styled.div`
@@ -40,8 +39,6 @@ const Category = styled.div`
   flex-direction: row;
   align-items: center;
   max-width: 400px;
-  border: 3px solid #091292;
-  border-radius: 10px;
   margin: 5px;
   flex-wrap: wrap;
   justify-content: center;
@@ -62,14 +59,14 @@ const Image = styled.img`
 
 const Text = styled.span`
   margin-top: 5px;
-  color: #091292;
+  color: white;
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 700;
 `;
 
 const Skills = () => (
   <SkillsContainer>
-    <h1>Skills</h1>
+    <h1 style={{ color: "white" }}>Skills</h1>
     <CategoryContainer>
       {/* Frontend 카테고리 */}
       <Category>
