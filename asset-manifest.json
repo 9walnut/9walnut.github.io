@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.eb2e5289.js",
+    "main.js": "/static/js/main.fa041646.js",
     "static/media/thewavethumbnail.png": "/static/media/thewavethumbnail.f5fb4338b588aff946fa.png",
     "static/media/ohsulthumbnail.png": "/static/media/ohsulthumbnail.e47257ebc5bc37e85cdc.png",
     "static/media/Jenkins-Light.svg": "/static/media/Jenkins-Light.07c3eb493ad6480d85a1ee5fb54b0c2a.svg",
@@ -9,22 +9,27 @@
     "static/media/Kubernetes.svg": "/static/media/Kubernetes.2145c16cb0b596ae840e0ff664a5abd2.svg",
     "static/media/AWS-Light.svg": "/static/media/AWS-Light.5884438f691cc18cce48b06b820acff0.svg",
     "static/media/MySQL-Light.svg": "/static/media/MySQL-Light.1baf3273bad5f3b9714f0927cf7d8b3a.svg",
+    "static/media/GithubActions-Light.svg": "/static/media/GithubActions-Light.e9b8d8d405a876fc130eb0752aab7d2e.svg",
     "static/media/NodeJS-Light.svg": "/static/media/NodeJS-Light.aea93409f1111d62a1eaa3347b033dda.svg",
+    "static/media/Github-Light.svg": "/static/media/Github-Light.7f8df044b637c67b8b8302fd8aaefe32.svg",
+    "static/media/Git.svg": "/static/media/Git.87d6e2a3383a582dd8d951daf9c95c04.svg",
     "static/media/Java-Light.svg": "/static/media/Java-Light.76016987bb8232e257a6187980dab1cf.svg",
     "static/media/ExpressJS-Light.svg": "/static/media/ExpressJS-Light.e667359082c6a1e7a37a4a6a67335271.svg",
     "static/media/React-Light.svg": "/static/media/React-Light.859310e341351502b4a2a19a19f7ad32.svg",
     "static/media/TypeScript.svg": "/static/media/TypeScript.5d93426aa26d9e2ac669d370a8fc46a1.svg",
+    "static/media/LinkedIn.svg": "/static/media/LinkedIn.a4185a982c50184b0634a12832ad6fc5.svg",
     "static/media/Spring-Light.svg": "/static/media/Spring-Light.2e50c40b11e1dd6e58065c21ae4c1e05.svg",
     "static/media/JavaScript.svg": "/static/media/JavaScript.9a071f2801f9f92598764d48c7225305.svg",
     "static/media/MongoDB.svg": "/static/media/MongoDB.d4ec4d452a7f201ba12bd75b4657a816.svg",
     "static/media/Docker.svg": "/static/media/Docker.f99b96943df37cd4112b8f13839b7eaf.svg",
     "static/media/CSS.svg": "/static/media/CSS.5fcd7f5683afc0fc6d0186a083262016.svg",
     "static/media/HTML.svg": "/static/media/HTML.ca0db580ffd74f086f2dc2a71dacd660.svg",
+    "static/media/tistory.svg": "/static/media/tistory.4907b878948001544661796fdb617450.svg",
     "index.html": "/index.html",
     "static/media/Hibernate-Light.svg": "/static/media/Hibernate-Light.352684d2501f9bb6a60b910828743286.svg",
-    "main.eb2e5289.js.map": "/static/js/main.eb2e5289.js.map"
+    "main.fa041646.js.map": "/static/js/main.fa041646.js.map"
   },
   "entrypoints": [
-    "static/js/main.eb2e5289.js"
+    "static/js/main.fa041646.js"
   ]
 }
