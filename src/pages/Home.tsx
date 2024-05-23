@@ -122,7 +122,7 @@ const Home = () => (
     </Parallax>
     <MainContainer>
       <div id="portfolio">
-        <SectionTitle>Projects</SectionTitle>
+        <SectionTitle>Portfolio</SectionTitle>
         {/* 오늘의 술 */}
         <ContentSection
           title="오늘의 술"
