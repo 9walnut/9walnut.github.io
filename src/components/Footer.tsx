@@ -1,9 +1,7 @@
-// src/components/Footer.js
-import React from "react";
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   background-color: #f1f1f1;

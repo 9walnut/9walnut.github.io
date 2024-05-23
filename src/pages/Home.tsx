@@ -4,6 +4,9 @@ import { Parallax } from "react-parallax";
 import styled from "styled-components";
 import Skills from "../components/Skills";
 import backgroundImage from "../assets/hodu3.jpg";
+import githubImg from "../assets/logoImg/Github-Light.svg";
+import tistoryImg from "../assets/logoImg/tistory.svg";
+import linkedInImg from "../assets/logoImg/LinkedIn.svg";
 import ohsulthumnail from "../assets/ohsulthumbnail.png";
 import thewavethumbnail from "../assets/thewavethumbnail.png";
 import ContentSection from "../components/ContentSection";
@@ -38,19 +41,19 @@ const HeroText = styled.div`
 `;
 
 const H1 = styled.h1`
-  font-size: 2rem; /* h1의 글꼴 크기 설정 */
+  font-size: 2rem;
   margin-bottom: 10px;
-  color: #fff; /* 텍스트 색상 설정 */
+  color: #fff;
 `;
 
 const H2 = styled.h2`
-  font-size: 1.5rem; /* h2의 글꼴 크기 설정 */
+  font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #fff; /* 텍스트 색상 설정 */
+  color: #fff;
 `;
 
 const ProfileImage = styled.img`
-  max-width: 600px;
+  max-width: 400px;
   margin: 20px;
   height: auto;
   border-radius: 10px;
@@ -76,7 +79,7 @@ const LogoImage = styled.img`
 const Home = () => (
   <div>
     <Navigation />
-    <Parallax bgImage={backgroundImage} strength={500}>
+    <Parallax strength={500}>
       <HeroSection>
         <HeroText>
           <H2>Hi!</H2>
@@ -85,14 +88,14 @@ const Home = () => (
           <H2>I specialized in node.JS and Springboot</H2>
           <H2>Also, I familiar with AWS, Docker</H2>
           <LogoContainer>
-            <LogoLink href="링크 주소" target="_blank">
-              <LogoImage src={backgroundImage} alt="Github" />
+            <LogoLink href="https://github.com/9walnut" target="_blank">
+              <LogoImage src={githubImg} alt="Github" />
             </LogoLink>
             <LogoLink href="링크 주소" target="_blank">
-              <LogoImage src={backgroundImage} alt="LinkedIn" />
+              <LogoImage src={linkedInImg} alt="LinkedIn" />
             </LogoLink>
-            <LogoLink href="링크 주소" target="_blank">
-              <LogoImage src={backgroundImage} alt="Tistory" />
+            <LogoLink href="https://9walnut.tistory.com/" target="_blank">
+              <LogoImage src={tistoryImg} alt="Tistory" />
             </LogoLink>
           </LogoContainer>
         </HeroText>

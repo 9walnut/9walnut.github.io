@@ -17,13 +17,16 @@ import dockerImg from "../assets/stackImg/Docker.svg";
 import tsImg from "../assets/stackImg/TypeScript.svg";
 import expressImg from "../assets/stackImg/ExpressJS-Light.svg";
 import jenkinsImg from "../assets/stackImg/Jenkins-Light.svg";
+import gitImg from "../assets/stackImg/Git.svg";
+import githubImg from "../assets/stackImg/Github-Light.svg";
+import gitactionsImg from "../assets/stackImg/GithubActions-Light.svg";
 
 const SkillsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  max-width: 1200px;
+  max-width: 1400px;
 `;
 
 const CategoryContainer = styled.div`
@@ -36,6 +39,7 @@ const Category = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  max-width: 400px;
   border: 3px solid #091292;
   border-radius: 10px;
   margin: 5px;
@@ -58,6 +62,9 @@ const Image = styled.img`
 
 const Text = styled.span`
   margin-top: 5px;
+  color: #091292;
+  font-size: 24px;
+  font-weight: 900;
 `;
 
 const Skills = () => (
@@ -142,6 +149,18 @@ const Skills = () => (
         <ImageContainer>
           <Image src={jenkinsImg}></Image>
           <Text>Jenkins</Text>
+        </ImageContainer>{" "}
+        <ImageContainer>
+          <Image src={githubImg}></Image>
+          <Text>Github</Text>
+        </ImageContainer>{" "}
+        <ImageContainer>
+          <Image src={gitImg}></Image>
+          <Text>Git</Text>
+        </ImageContainer>{" "}
+        <ImageContainer>
+          <Image src={gitactionsImg}></Image>
+          <Text>Gitactions</Text>
         </ImageContainer>
       </Category>
     </CategoryContainer>
