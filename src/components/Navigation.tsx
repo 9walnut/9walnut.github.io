@@ -99,7 +99,9 @@ const Navigation = () => {
       </Hamburger>
       <NavLinks open={isOpen}>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/Resume">Resume</NavLink>
+        <ExternalLink href="/resume.pdf" download>
+          Resume
+        </ExternalLink>
         <NavLink to="/Portfoilo">Portfolio</NavLink>
         <ExternalLink
           href="https://github.com/9walnut"
