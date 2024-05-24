@@ -123,8 +123,9 @@ const Contact: React.FC = () => {
       <ContactInfo>
         <h1>Contact</h1>
         <div style={{ marginBottom: 20 }}>
-          If you want to know more about me or my work, or if you would just
-          like to say hello, send me a message, I'd love to hear from you
+          If you want to know more about me or my work or
+          <div>if you would just like to say hello</div>
+          <div>send me a message, I'd love to hear from you</div>
         </div>
         <div>
           <ContactLink href="mailto:kguho9202@gmail.com">
@@ -146,19 +147,14 @@ const Contact: React.FC = () => {
       </ContactInfo>
       <ContactForm ref={form} onSubmit={sendEmail}>
         <h2>Send me a message</h2>
-        <FormInput
-          type="text"
-          name="user_name"
-          placeholder="Your Name"
-          required
-        />
+        <FormInput type="text" name="user_name" placeholder="이름" required />
         <FormInput
           type="email"
           name="user_email"
-          placeholder="Your Email"
+          placeholder="이메일 주소"
           required
         />
-        <FormTextArea name="message" placeholder="Your Message" required />
+        <FormTextArea name="message" placeholder="내용" required />
         <FormButton type="submit">Send</FormButton>
       </ContactForm>
     </ContactContainer>

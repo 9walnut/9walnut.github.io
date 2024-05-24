@@ -30,7 +30,7 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   width: 100%;
   min-width: 150px;
-  max-width: 300px;
+  max-width: 500px;
   height: 200px;
   border-radius: 10px;
 `;
@@ -64,9 +64,10 @@ const TechStacks = styled.div`
 const TechStack = styled.span`
   margin-right: 10px;
   color: white;
-  background-color: #6c757d;
-  border-radius: 10rem;
-  padding: 5px;
+  /* background-color: #6c757d; */
+  background-color: #3375e8;
+  border-radius: 1rem;
+  padding: 8px;
   font-size: 75%;
   font-weight: 700;
 `;
