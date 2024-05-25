@@ -1,4 +1,3 @@
-// src/components/Navigation.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -8,13 +7,14 @@ interface NavLinksProps {
   open: boolean;
 }
 
-const Nav = styled.nav`
+const Nav = styled.nav<NavLinksProps>`
   top: 0;
   left: 0;
   width: 100%;
+  margin: 0 auto; /* 가운데 정렬 */
   position: fixed;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   background: #fff;
   padding: 1rem;
@@ -23,10 +23,13 @@ const Nav = styled.nav`
     Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji",
     "Segoe UI Symbol";
   z-index: 2;
+
+  @media (max-width: 758px) {
+    max-width: 758px;
+  }
 `;
 
 const Logo = styled(Link)`
-  margin-right: auto;
   img {
     border-radius: 70%;
     height: 40px;
@@ -37,9 +40,11 @@ const NavLinks = styled.div.attrs<NavLinksProps>(({ open }) => ({
   open,
 }))<NavLinksProps>`
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  width: ${({ open }) => (open ? "100%" : "auto")};
   position: relative;
+  justify-content: flex-end;
+  align-items: center;
+  opacity: 0.5;
 
   @media (max-width: 758px) {
     display: ${({ open }) => (open ? "flex" : "none")};
@@ -56,6 +61,8 @@ const NavLinks = styled.div.attrs<NavLinksProps>(({ open }) => ({
 const NavLink = styled.a`
   color: #333;
   text-decoration: none;
+  margin-right: 30px;
+  padding: 15px;
   font-weight: 700;
   &:hover {
     color: #007bff;
@@ -65,6 +72,8 @@ const NavLink = styled.a`
 const ExternalLink = styled.a`
   color: #333;
   text-decoration: none;
+  margin-right: 30px;
+  padding: 15px;
   font-weight: 700;
   &:hover {
     color: #007bff;
@@ -77,6 +86,7 @@ const Hamburger = styled.div`
   cursor: pointer;
   @media (max-width: 758px) {
     display: flex;
+    margin-right: 40px;
   }
 `;
 
@@ -95,9 +105,9 @@ const Navigation = () => {
   };
 
   return (
-    <Nav>
+    <Nav open={isOpen}>
       <Logo to="/">
-        <img src={LogoImg} alt="Logo"></img>
+        <img src={LogoImg} alt="Logo" />
       </Logo>
       <Hamburger onClick={toggleMenu}>
         <Bar />

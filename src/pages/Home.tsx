@@ -28,10 +28,15 @@ const HeroSection = styled.section`
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: auto;
   justify-content: center;
-  height: 80vh;
   color: white;
   text-align: center;
+  padding-top: 84px;
+
+  @media (max-width: 758px) {
+    flex-direction: column;
+  }
 `;
 
 const HeroText = styled.div`
@@ -62,11 +67,17 @@ const H3 = styled.h3`
 `;
 
 const ProfileImage = styled.img`
-  max-width: 20%; /* 화면 너비의 30%로 최대 너비 지정 */
-  height: auto; /* 높이는 자동으로 조절되도록 설정 */
+  max-width: 20%;
+  height: auto;
   margin: 40px;
   border-radius: 70%;
   flex: 1;
+
+  @media (max-width: 758px) {
+    order: -1;
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -107,7 +118,7 @@ const ParagraphSpan = styled.span`
 const Home = () => (
   <div>
     <Navigation />
-    <Parallax strength={500}>
+    <Parallax strength={30}>
       <HeroSection>
         <HeroText>
           <H2>Hi, I'm</H2>
