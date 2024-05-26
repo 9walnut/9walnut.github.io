@@ -1,4 +1,3 @@
-// ContentSection.tsx
 import React from "react";
 import styled from "styled-components";
 
@@ -13,30 +12,48 @@ interface ContentSectionProps {
 
 const StyledSection = styled.section`
   display: flex;
-  width: 100%;
+  width: auto;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 20px;
   background: white;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 10px;
+  }
 `;
 
 const ImageWrapper = styled.div`
   flex: 1;
-  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
   min-width: 150px;
-  max-width: 500px;
+  max-width: 450px;
   height: 200px;
   border-radius: 10px;
 `;
 
 const ContentWrapper = styled.div`
-  flex: 2;
+  flex: 1;
+  max-width: 560px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 const Title = styled.h1`
@@ -58,13 +75,13 @@ const Link = styled.a`
 `;
 
 const TechStacks = styled.div`
-  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const TechStack = styled.span`
-  margin-right: 10px;
+  margin: 3px;
   color: white;
-  /* background-color: #6c757d; */
   background-color: #3375e8;
   border-radius: 1rem;
   padding: 8px;

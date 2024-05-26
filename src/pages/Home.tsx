@@ -18,7 +18,6 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   background-color: #f5f5f5;
   width: 100%;
 `;
@@ -102,7 +101,7 @@ const SectionTitle = styled.h1`
 
 const Paragraph = styled.p`
   max-width: 670px;
-  margin: 10px 0;
+  margin: 5px 0;
   font-size: 1rem;
 `;
 

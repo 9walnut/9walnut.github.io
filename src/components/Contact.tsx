@@ -7,7 +7,8 @@ import tistoryImg from "../assets/logoImg/tistory.svg";
 import linkedInImg from "../assets/logoImg/LinkedIn.svg";
 
 const ContactContainer = styled.div`
-  width: 1200px;
+  width: auto;
+  max-width: 1000px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,18 +16,18 @@ const ContactContainer = styled.div`
   margin: 0 auto;
   flex-wrap: wrap;
 
-  @media (max-width: 758px) {
-    flex-direction: column; /* 화면이 작아질 때 세로로 정렬 */
+  @media (max-width: 1240px) {
+    flex-direction: column;
   }
 `;
 
 const ContactInfo = styled.div`
-  max-width: 600px;
+  width: auto;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex-grow: 1; /* 공간을 동등하게 분배 */
+  flex-grow: 1;
 `;
 
 const ContactLink = styled.a`
@@ -49,10 +50,10 @@ const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
+  width: auto;
   max-width: 500px;
   padding: 20px;
-  flex-grow: 1; /* 공간을 동등하게 분배 */
+  flex-grow: 1;
 `;
 
 const FormInput = styled.input`

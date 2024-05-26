@@ -11,7 +11,7 @@ const Nav = styled.nav<NavLinksProps>`
   top: 0;
   left: 0;
   width: 100%;
-  margin: 0 auto; /* 가운데 정렬 */
+  margin: 0 auto;
   position: fixed;
   display: flex;
   justify-content: space-between;
