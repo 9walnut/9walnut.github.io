@@ -148,14 +148,19 @@ const Contact: React.FC = () => {
       </ContactInfo>
       <ContactForm ref={form} onSubmit={sendEmail}>
         <h2>Send me a message</h2>
-        <FormInput type="text" name="user_name" placeholder="이름" required />
+        <FormInput
+          type="text"
+          name="user_name"
+          placeholder="이름 (name)"
+          required
+        />
         <FormInput
           type="email"
           name="user_email"
-          placeholder="이메일 주소"
+          placeholder="이메일 주소 (email)"
           required
         />
-        <FormTextArea name="message" placeholder="내용" required />
+        <FormTextArea name="message" placeholder="내용 (message)" required />
         <FormButton type="submit">Send</FormButton>
       </ContactForm>
     </ContactContainer>

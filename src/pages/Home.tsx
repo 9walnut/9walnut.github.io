@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, ReactNode } from "react";
 import Navigation from "../components/Navigation";
 import { Parallax } from "react-parallax";
 import styled from "styled-components";
@@ -12,6 +12,12 @@ import linkedInImg from "../assets/logoImg/LinkedIn.svg";
 import ohsulthumnail from "../assets/ohsulthumbnail.png";
 import thewavethumbnail from "../assets/thewavethumbnail.png";
 import ContentSection from "../components/ContentSection";
+import checkmark from "../assets/checkmark-xxl.png";
+
+interface AccordionSectionProps {
+  title: string;
+  children: ReactNode; // Explicitly typing children prop
+}
 
 // 스타일 정의
 const MainContainer = styled.div`
@@ -97,6 +103,7 @@ const LogoImage = styled.img`
 
 const SectionTitle = styled.h1`
   text-align: center;
+  margin-bottom: 35px;
 `;
 
 const Paragraph = styled.p`
@@ -114,6 +121,31 @@ const ParagraphSpan = styled.span`
   font-weight: 500;
 `;
 
+const ChecklistImage = styled.img`
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+`;
+
+const AccordionSection: React.FC<AccordionSectionProps> = ({
+  title,
+  children,
+}) => {
+  const [isExpanded, setExpanded] = useState(false);
+
+  return (
+    <div>
+      <div
+        onClick={() => setExpanded(!isExpanded)}
+        style={{ cursor: "pointer" }}
+      >
+        {title}
+      </div>
+      {isExpanded && <div>{children}</div>}
+    </div>
+  );
+};
+
 const Home = () => (
   <div>
     <Navigation />
@@ -122,7 +154,10 @@ const Home = () => (
         <HeroText>
           <H2>Hi, I'm</H2>
           <H1>Guho Kwon</H1>
-          <H2>Web Backend Developer</H2>
+          <H2>
+            <ChecklistImage src={checkmark} alt="Checklist" />
+            Web Backend Developer
+          </H2>
           <H3>
             I specialized in node.JS and Springboot and I familiar with AWS,
             Docker
@@ -165,31 +200,14 @@ const Home = () => (
             "Gitaction",
           ]}
         >
-          {/* 더웨이브 */}
           <Paragraph>
             <ParagraphMain>
-              위치, 태그 정보를 기반으로 취향에 맞는 술집 정보를 제공하는
-              서비스입니다.
-            </ParagraphMain>{" "}
-            술, 분위기 등의 태그를 선택해 원하는 조건에 맞는 술집을 확인할 수
-            있으며 리뷰 작성을 통해 술집 정보를 동적으로 업데이트합니다
-          </Paragraph>
-          <Paragraph>
-            <ParagraphSpan>Spring boot</ParagraphSpan>를 사용해보며{" "}
-            <ParagraphSpan>Spring Security</ParagraphSpan>을 활용하여{" "}
-            CustomFilter를 구현해 볼수 있었습니다
-          </Paragraph>
-          <Paragraph>
-            <ParagraphSpan>JPA</ParagraphSpan>를 활용해 DB에 접근할 수 있었고
-            직접 쿼리를 작성해보는 경험을 해볼 수 있었습니다.
-          </Paragraph>
-          <Paragraph>
-            <ParagraphSpan>Gitaction</ParagraphSpan>을 활용해서 CI / CD 파이프
-            라인을 구축하여 배포를 자동화하여 오류를 최소화하고 Docker 이미지를
-            Docker Hub에 관리 하는 등 이미지 및 컨테이너를 관리해볼 수
-            있었습니다
+              위치, 태그 정보를 기반으로 취향에 맞는 술집 정보를 제공하는 서비스
+            </ParagraphMain>
           </Paragraph>
         </ContentSection>
+
+        {/* 더 웨이브 */}
         <ContentSection
           title="The Wave"
           imageSrc={thewavethumbnail}
@@ -210,27 +228,8 @@ const Home = () => (
           <Paragraph>
             <ParagraphMain>
               친동생이 실제 판매 중인 레터링 풍선을 판매하는 쇼핑몰 컨셉의
-              프로젝트 입니다.
+              프로젝트
             </ParagraphMain>
-            <div>
-              The Wave는 실제 가게명입니다. 제 능력으로 가족에게 도움이 되고
-              싶은 마음에 진행한 프로젝트입니다
-            </div>
-          </Paragraph>
-          <Paragraph>
-            <ParagraphSpan>Node.JS</ParagraphSpan>와{" "}
-            <ParagraphSpan>Sequelize(ORM)</ParagraphSpan>에 조금 더 익숙해진
-            계기가 되었습니다
-          </Paragraph>
-          <Paragraph>
-            <ParagraphSpan>Jenkins, Webhook</ParagraphSpan>을 활용해서 처음으로
-            CI / CD 파이프 라인을 구축해 볼수 있었고 AWS의 리소스들을 직접 할당,
-            연결, 설정하면서 <ParagraphSpan>Docker</ParagraphSpan>를 활용하여
-            배포 경험도 쌓을 수 있었습니다
-          </Paragraph>
-          <Paragraph>
-            <ParagraphSpan>OAuth2.0</ParagraphSpan>의 개념을 다지고 소셜 로그인
-            기능을 구현해 볼 수 있었습니다
           </Paragraph>
         </ContentSection>
       </div>
