@@ -1,4 +1,4 @@
-import React, { useState, ReactNode } from "react";
+import React from "react";
 import Navigation from "../components/Navigation";
 import { Parallax } from "react-parallax";
 import styled from "styled-components";
@@ -13,11 +13,6 @@ import ohsulthumnail from "../assets/ohsulthumbnail.png";
 import thewavethumbnail from "../assets/thewavethumbnail.png";
 import ContentSection from "../components/ContentSection";
 import checkmark from "../assets/checkmark-xxl.png";
-
-interface AccordionSectionProps {
-  title: string;
-  children: ReactNode; // Explicitly typing children prop
-}
 
 // 스타일 정의
 const MainContainer = styled.div`
@@ -180,6 +175,7 @@ const Home = () => (
             <ParagraphMain>
               위치, 태그 정보를 기반으로 취향에 맞는 술집 정보를 제공하는 서비스
             </ParagraphMain>
+            테스트~~~~ 테스트2~~~ 테스트3
           </Paragraph>
         </ContentSection>
 
