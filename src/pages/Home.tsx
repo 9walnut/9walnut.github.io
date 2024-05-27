@@ -116,35 +116,11 @@ const ParagraphMain = styled.span`
   font-weight: bolder;
 `;
 
-const ParagraphSpan = styled.span`
-  color: green;
-  font-weight: 500;
-`;
-
 const ChecklistImage = styled.img`
   width: 20px;
   height: 20px;
   margin-right: 10px;
 `;
-
-const AccordionSection: React.FC<AccordionSectionProps> = ({
-  title,
-  children,
-}) => {
-  const [isExpanded, setExpanded] = useState(false);
-
-  return (
-    <div>
-      <div
-        onClick={() => setExpanded(!isExpanded)}
-        style={{ cursor: "pointer" }}
-      >
-        {title}
-      </div>
-      {isExpanded && <div>{children}</div>}
-    </div>
-  );
-};
 
 const Home = () => (
   <div>
