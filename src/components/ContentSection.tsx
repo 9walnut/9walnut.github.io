@@ -39,11 +39,10 @@ const ImageWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  width: 100%;
-  min-width: 150px;
-  max-width: 450px;
-  height: 200px;
+  width: 450px;
+  height: auto;
   border-radius: 10px;
+  object-fit: cover;
 `;
 
 const ContentWrapper = styled.div`

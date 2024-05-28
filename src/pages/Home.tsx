@@ -9,10 +9,10 @@ import gmailImg from "../assets/logoImg/gmail.svg";
 import githubImg from "../assets/logoImg/Github-Light.svg";
 import tistoryImg from "../assets/logoImg/tistory.svg";
 import linkedInImg from "../assets/logoImg/LinkedIn.svg";
-import ohsulthumnail from "../assets/ohsulthumbnail.png";
-import thewavethumbnail from "../assets/thewavethumbnail.png";
 import ContentSection from "../components/ContentSection";
 import checkmark from "../assets/checkmark-xxl.png";
+import wave from "../assets/thumbnail/wave.jpg";
+import ohsul from "../assets/thumbnail/ohsul.jpg";
 
 // 스타일 정의
 const MainContainer = styled.div`
@@ -117,6 +117,20 @@ const ChecklistImage = styled.img`
   margin-right: 10px;
 `;
 
+const HighlightUnderline = styled.span`
+  font-style: oblique;
+  background-image: linear-gradient(
+    0deg,
+    transparent 0%,
+    transparent 46%,
+    #ffa620 90%,
+    #fba11a 100%
+  );
+  background-size: 100% 0.2em;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+`;
+
 const Home = () => (
   <div>
     <Navigation />
@@ -127,7 +141,7 @@ const Home = () => (
           <H1>Guho Kwon</H1>
           <H2>
             <ChecklistImage src={checkmark} alt="Checklist" />
-            Web Backend Developer
+            <HighlightUnderline>Web Backend Developer</HighlightUnderline>
           </H2>
           <H3>
             I specialized in node.JS and Springboot and I familiar with AWS,
@@ -157,7 +171,7 @@ const Home = () => (
         {/* 오늘의 술 */}
         <ContentSection
           title="오늘의 술"
-          imageSrc={ohsulthumnail}
+          imageSrc={ohsul}
           deployLink="https://ohsul.site"
           codeLink="https://github.com/9walnut/Ohsul-BE"
           techStacks={[
@@ -175,14 +189,13 @@ const Home = () => (
             <ParagraphMain>
               위치, 태그 정보를 기반으로 취향에 맞는 술집 정보를 제공하는 서비스
             </ParagraphMain>
-            테스트~~~~ 테스트2~~~ 테스트3
           </Paragraph>
         </ContentSection>
 
         {/* 더 웨이브 */}
         <ContentSection
           title="The Wave"
-          imageSrc={thewavethumbnail}
+          imageSrc={wave}
           deployLink="https://thewavemarket.co.kr/"
           codeLink="https://github.com/9walnut/TheWave"
           techStacks={[
