@@ -189,6 +189,11 @@ const Home = () => (
             <ParagraphMain>
               위치, 태그 정보를 기반으로 취향에 맞는 술집 정보를 제공하는 서비스
             </ParagraphMain>
+            {/* <ul>
+              <li>주요 기능 1</li>
+              <li>주요 기능 2</li>
+              <li>주요 기능 3</li>
+            </ul> */}
           </Paragraph>
         </ContentSection>
 

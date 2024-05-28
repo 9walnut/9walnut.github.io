@@ -78,9 +78,9 @@ const FormButton = styled.button`
   width: 200px;
   padding: 10px;
   border: none;
-  color: #636b83;
+  color: white;
   border-radius: 5px;
-  background-color: #fed766;
+  background-color: #1e2749;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-weight: 500;
   cursor: pointer;
@@ -124,9 +124,10 @@ const Contact: React.FC = () => {
       <ContactInfo>
         <h1>Contact</h1>
         <div style={{ marginBottom: 20 }}>
-          If you want to know more about me or my work or
-          <div>if you would just like to say hello</div>
-          <div>send me a message, I'd love to hear from you</div>
+          <ContactLink href="kguho9202@gmail.com">
+            kguho9202@gmail.com
+          </ContactLink>
+          <div>Phone: +82 010-6321-9202</div>
         </div>
         <div>
           <ContactLink href="mailto:kguho9202@gmail.com">
@@ -147,7 +148,7 @@ const Contact: React.FC = () => {
         </div>
       </ContactInfo>
       <ContactForm ref={form} onSubmit={sendEmail}>
-        <h2>Send me a message</h2>
+        <h2>Send Email</h2>
         <FormInput
           type="text"
           name="user_name"
