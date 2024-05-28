@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.a56ff986.js",
-    "static/media/thewavethumbnail.png": "/static/media/thewavethumbnail.f5fb4338b588aff946fa.png",
-    "static/media/ohsulthumbnail.png": "/static/media/ohsulthumbnail.e47257ebc5bc37e85cdc.png",
+    "main.js": "/static/js/main.1b195009.js",
+    "static/media/wave.jpg": "/static/media/wave.23a30933ed3a5525dcf8.jpg",
+    "static/media/ohsul.jpg": "/static/media/ohsul.691805ff6ddc528cbf95.jpg",
     "static/media/Jenkins-Light.svg": "/static/media/Jenkins-Light.07c3eb493ad6480d85a1ee5fb54b0c2a.svg",
     "static/media/hodu3.jpg": "/static/media/hodu3.fd1e82586d252c501cf3.jpg",
     "static/media/NestJS-Light.svg": "/static/media/NestJS-Light.beabebe7b3284f5a139e3a17c40467bd.svg",
@@ -28,9 +28,9 @@
     "static/media/tistory.svg": "/static/media/tistory.4907b878948001544661796fdb617450.svg",
     "index.html": "/index.html",
     "static/media/Hibernate-Light.svg": "/static/media/Hibernate-Light.352684d2501f9bb6a60b910828743286.svg",
-    "main.a56ff986.js.map": "/static/js/main.a56ff986.js.map"
+    "main.1b195009.js.map": "/static/js/main.1b195009.js.map"
   },
   "entrypoints": [
-    "static/js/main.a56ff986.js"
+    "static/js/main.1b195009.js"
   ]
 }
