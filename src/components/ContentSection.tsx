@@ -34,6 +34,7 @@ const ImageWrapper = styled.div`
   margin: 10px;
 
   @media (max-width: 768px) {
+    width: auto;
     margin-bottom: 10px;
   }
 `;
@@ -43,12 +44,16 @@ const Image = styled.img`
   height: auto;
   border-radius: 10px;
   object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: 280px;
+  }
 `;
 
 const ContentWrapper = styled.div`
   flex: 1;
   max-width: 560px;
-  width: 100%;
+  width: auto;
 
   @media (max-width: 768px) {
     max-width: 100%;
