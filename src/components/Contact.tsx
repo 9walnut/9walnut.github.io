@@ -23,6 +23,7 @@ const ContactContainer = styled.div`
 
 const ContactInfo = styled.div`
   width: auto;
+  color: #254336;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -32,11 +33,11 @@ const ContactInfo = styled.div`
 
 const ContactLink = styled.a`
   margin: 5px 0;
-  color: #333;
+  color: #6b8a7a;
   text-decoration: none;
   font-weight: 700;
   &:hover {
-    color: #007bff;
+    color: #b7b597;
   }
 `;
 
@@ -47,6 +48,7 @@ const ContactLogo = styled.img`
 `;
 
 const ContactForm = styled.form`
+  color: #254336;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -58,6 +60,7 @@ const ContactForm = styled.form`
 
 const FormInput = styled.input`
   width: 100%;
+  color: #dad3be;
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ddd;

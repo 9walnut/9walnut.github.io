@@ -120,12 +120,13 @@ const ChecklistImage = styled.img`
 
 const HighlightUnderline = styled.span`
   font-style: oblique;
+  color: #b7b597;
   background-image: linear-gradient(
     0deg,
     transparent 0%,
     transparent 46%,
-    #feae6f 90%,
-    #feae6f 100%
+    #dad3be 90%,
+    #b7b597 100%
   );
   background-size: 100% 0.2em;
   background-position: 0 100%;
