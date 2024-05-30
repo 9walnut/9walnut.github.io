@@ -63,12 +63,19 @@ const ContentWrapper = styled.div`
 const Title = styled.h1`
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #091292;
+  color: #6b8a7a;
+  text-align: center;
+`;
+
+const LinksWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 `;
 
 const Link = styled.a`
   margin-right: 10px;
-  color: #3375e8;
+  color: #b7b597;
   text-decoration: none;
   font-size: 100%;
   font-weight: 700;
@@ -86,7 +93,7 @@ const TechStacks = styled.div`
 const TechStack = styled.span`
   margin: 3px;
   color: white;
-  background-color: #3375e8;
+  background-color: #dad3be;
   border-radius: 1rem;
   padding: 8px;
   font-size: 75%;
@@ -109,17 +116,20 @@ const ContentSection: React.FC<ContentSectionProps> = ({
     )}
     <ContentWrapper>
       {title && <Title>{title}</Title>}
+      <LinksWrapper>
+        {deployLink && (
+          <Link href={deployLink} target="_blank">
+            Visit Site
+          </Link>
+        )}
+        {codeLink && (
+          <Link href={codeLink} target="_blank">
+            GitHub Link
+          </Link>
+        )}
+      </LinksWrapper>
       {children}
-      {deployLink && (
-        <Link href={deployLink} target="_blank">
-          Visit Site
-        </Link>
-      )}
-      {codeLink && (
-        <Link href={codeLink} target="_blank">
-          GitHub Link
-        </Link>
-      )}
+
       {techStacks && (
         <TechStacks>
           {techStacks.map((stack, index) => (

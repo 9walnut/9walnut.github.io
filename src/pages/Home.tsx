@@ -24,7 +24,7 @@ const MainContainer = styled.div`
 `;
 
 const HeroSection = styled.section`
-  background-color: #1e2749;
+  background-color: #254336;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -99,6 +99,7 @@ const LogoImage = styled.img`
 const SectionTitle = styled.h1`
   text-align: center;
   margin-bottom: 35px;
+  color: #6b8a7a;
 `;
 
 const Paragraph = styled.p`
@@ -123,12 +124,16 @@ const HighlightUnderline = styled.span`
     0deg,
     transparent 0%,
     transparent 46%,
-    #ffa620 90%,
-    #fba11a 100%
+    #feae6f 90%,
+    #feae6f 100%
   );
   background-size: 100% 0.2em;
   background-position: 0 100%;
   background-repeat: no-repeat;
+
+  @media (max-width: 758px) {
+    font-size: 20px;
+  }
 `;
 
 const Home = () => (

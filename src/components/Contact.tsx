@@ -80,13 +80,13 @@ const FormButton = styled.button`
   border: none;
   color: white;
   border-radius: 5px;
-  background-color: #1e2749;
+  background-color: #254336;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-weight: 500;
   cursor: pointer;
   margin-left: auto;
   &:hover {
-    background-color: #0056b3;
+    background-color: #b7b597;
   }
 `;
 

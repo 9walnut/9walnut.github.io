@@ -22,7 +22,7 @@ import githubImg from "../assets/stackImg/Github-Light.svg";
 import gitactionsImg from "../assets/stackImg/GithubActions-Light.svg";
 
 const SkillsContainer = styled.div`
-  background-color: #1e2749;
+  background-color: #254336;
   display: flex;
   flex-direction: column;
   align-items: center;
