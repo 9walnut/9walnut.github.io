@@ -10,7 +10,7 @@ import githubImg from "../assets/logoImg/Github-Light.svg";
 import tistoryImg from "../assets/logoImg/tistory.svg";
 import linkedInImg from "../assets/logoImg/LinkedIn.svg";
 import ContentSection from "../components/ContentSection";
-import checkmark from "../assets/checkmark-xxl.png";
+// import checkmark from "../assets/checkmark-xxl.png";
 import wave from "../assets/thumbnail/wave.jpg";
 import ohsul from "../assets/thumbnail/ohsul.jpg";
 
@@ -112,11 +112,11 @@ const ParagraphMain = styled.span`
   font-weight: bolder;
 `;
 
-const ChecklistImage = styled.img`
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-`;
+// const ChecklistImage = styled.img`
+//   width: 20px;
+//   height: 20px;
+//   margin-right: 10px;
+// `;
 
 const HighlightUnderline = styled.span`
   font-style: oblique;
@@ -138,7 +138,7 @@ const HighlightUnderline = styled.span`
 `;
 
 const Home = () => (
-  <div>
+  <div id="home">
     <Navigation />
     <Parallax strength={30}>
       <HeroSection>
@@ -146,7 +146,7 @@ const Home = () => (
           <H2>Hi, I'm</H2>
           <H1>Guho Kwon</H1>
           <H2>
-            <ChecklistImage src={checkmark} alt="Checklist" />
+            {/* <ChecklistImage src={checkmark} alt="Checklist" /> */}
             <HighlightUnderline>Web Backend Developer</HighlightUnderline>
           </H2>
           <H3>
